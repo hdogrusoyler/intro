@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ListGroup, ListGroupItem, Badge } from "reactstrap";
+import {Link} from 'react-router-dom';
 
 export default class CartSummary extends Component {
   renderSummary() {
@@ -17,6 +18,7 @@ export default class CartSummary extends Component {
             <Badge color="success">{cartItem.quantity}</Badge>
           </ListGroupItem>
         ))}
+        <ListGroupItem><Link to="cart">Go To Cart</Link></ListGroupItem>
       </ListGroup>
     );
   }
